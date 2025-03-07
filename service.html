@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Services | Artificial Genesis</title>
+    <style>
+        /* Additional styles specific to the services page */
+        .service-detail {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        
+        .service-detail-grid:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .service-detail-grid:nth-child(odd) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .service-detail-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-detail-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .service-detail-title span {
+            color: var(--gold);
+        }
+        
+        .service-detail-text {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .service-detail-features {
+            margin-bottom: 30px;
+        }
+        
+        .service-detail-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .service-detail-feature i {
+            color: var(--gold);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .service-detail-cta {
+            margin-top: 30px;
+        }
+        
+        .service-detail-image {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: 400px;
+            background: var(--medium-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-detail-image svg {
+            width: 80%;
+            height: 80%;
+            opacity: 0.8;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .service-detail-grid,
+            .service-detail-grid:nth-child(even),
+            .service-detail-grid:nth-child(odd) {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-detail-image {
+                height: 300px;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Grid -->
+    <div class="bg-grid"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">Artificial <span>Genesis</span></div>
+                </div>
+                <div class="menu-toggle">☰</div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#process">Process</a></li>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="hero">
+        <div id="particle-container" class="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">TAILORED SOLUTIONS FOR YOUR NEEDS</p>
+                <h1 class="hero-title">Our <span class="text-gradient">Services</span> in Detail</h1>
+                <p class="hero-description">Discover how our comprehensive suite of AI solutions can transform your business operations, enhance decision-making, and drive sustainable growth.</p>
+            </div>
+        </div>
+        <div class="hero-visual floating">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="rgba(100, 255, 218, 0.2)" d="M45.7,-78.2C58.9,-71.3,69.3,-59.5,76.4,-45.9C83.4,-32.3,87.2,-16.2,87.6,0.2C88,16.6,85,33.3,76.5,45.9C67.9,58.5,53.9,67.1,39.5,72.1C25.1,77.1,10.5,78.5,-3.7,84.2C-17.9,89.9,-31.8,100,-45.9,100.8C-59.9,101.7,-74.2,93.3,-83.9,80.1C-93.7,66.9,-99,48.9,-100.2,31.5C-101.4,14.2,-98.6,-2.6,-91.7,-16.1C-84.8,-29.5,-73.9,-39.7,-61.4,-47C-48.9,-54.2,-34.9,-58.5,-22.1,-65.5C-9.3,-72.5,2.2,-82.1,15.9,-85.2C29.6,-88.2,45.4,-84.7,45.7,-78.2Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="section service-detail">
+        <div class="container">
+            
+            <!-- Custom AI Development Service -->
+            <div id="custom-ai" class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Custom <span>AI Development</span></h2>
+                    <p class="service-detail-text">Our bespoke AI development service creates tailor-made solutions designed specifically to address your unique business challenges. We leverage cutting-edge machine learning algorithms, neural networks, and deep learning technologies to build intelligent systems that evolve and improve over time.</p>
+                    
+                    <div class="service-detail-features">
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Customized machine learning models built to solve your specific business problems</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>AI systems that integrate seamlessly with your existing technology infrastructure</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Continuous learning capabilities that improve performance over time</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Rigorous testing protocols to ensure accuracy, reliability, and ethical implementation</p>
+                        </div>
+                    </div>
+                    
+                    <p class="service-detail-text">Whether you need natural language processing, computer vision, recommendation systems, or any other AI capability, our custom development approach ensures you receive exactly what your business needs to thrive in today's competitive landscape.</p>
+                    
+                    <div class="service-detail-cta">
+                        <a href="index.html#contact" class="btn">Request a Consultation</a>
+                    </div>
+                </div>
+                
+                <div class="service-detail-image">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="rgba(255, 215, 0, 0.2)" d="M47.7,-73.4C62,-66.9,74.2,-55.6,79.8,-41.7C85.3,-27.8,84.3,-11.4,81.9,4.4C79.5,20.1,75.7,35.3,67.5,48.7C59.3,62.1,46.7,73.7,32.1,76.6C17.5,79.5,0.9,73.8,-15.3,69.4C-31.4,65,-47.1,62,-59.1,52.8C-71.1,43.6,-79.4,28.3,-81.2,12.2C-82.9,-3.8,-78,-20.7,-68.6,-33C-59.2,-45.2,-45.2,-52.8,-32.2,-59.7C-19.1,-66.7,-7,-73,6.3,-82.4C19.7,-91.8,39.3,-104.3,47.7,-99.8C56,-95.4,53,-74,47.7,-73.4Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Workflow Integration Service -->
+            <div id="workflow-integration" class="service-detail-grid">
+                <div class="service-detail-image">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="rgba(100, 255, 218, 0.2)" d="M39.9,-65.7C53.5,-59.7,67.8,-52.6,75.2,-41C82.6,-29.3,83.2,-13.1,80.3,1.6C77.5,16.4,71.3,29.7,63.2,42.1C55.2,54.6,45.3,66.3,32.8,72.9C20.4,79.6,5.4,81.3,-8.7,79.2C-22.9,77.1,-36.2,71.1,-46.5,62.1C-56.8,53,-64.1,40.8,-71.2,27.4C-78.3,14,-85.1,-0.5,-83.6,-14.2C-82.2,-27.8,-72.4,-40.6,-60.6,-47.8C-48.8,-55.1,-34.9,-56.8,-22.8,-63.4C-10.7,-70,-5.4,-81.5,3.9,-88.5C13.1,-95.4,26.3,-97.8,39.9,-65.7Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+                
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Workflow <span>Integration</span></h2>
+                    <p class="service-detail-text">Seamlessly incorporate AI solutions into your existing systems and processes to minimize disruption and maximize impact. Our workflow integration service ensures that your new AI capabilities enhance rather than complicate your operations.</p>
+                    
+                    <div class="service-detail-features">
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Comprehensive analysis of your current workflows and systems</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Custom API development for smooth data exchange between systems</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Staff training and comprehensive documentation</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Post-implementation support and optimization</p>
+                        </div>
+                    </div>
+                    
+                    <p class="service-detail-text">We understand that the value of AI is only realized when it's properly integrated into your business operations. Our approach focuses on creating intuitive interfaces and seamless connections that make your AI solutions accessible and effective for all stakeholders.</p>
+                    
+                    <div class="service-detail-cta">
+                        <a href="index.html#contact" class="btn">Request a Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Predictive Analytics Service -->
+            <div id="predictive-analytics" class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">Predictive <span>Analytics</span></h2>
+                    <p class="service-detail-text">Transform raw data into actionable insights and forecasts to drive informed decision-making and strategic planning. Our predictive analytics services harness the power of advanced machine learning techniques to identify patterns, trends, and relationships within your data that human analysis might miss.</p>
+                    
+                    <div class="service-detail-features">
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Data collection, cleaning, and organization</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Advanced statistical modeling and forecasting</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Real-time monitoring and adaptive prediction systems</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Visual reporting dashboards for intuitive understanding</p>
+                        </div>
+                    </div>
+                    
+                    <p class="service-detail-text">Whether you need to forecast sales, predict customer behavior, optimize inventory, or identify emerging market trends, our predictive analytics solutions provide you with the insights needed to stay ahead of the competition and make data-driven decisions with confidence.</p>
+                    
+                    <div class="service-detail-cta">
+                        <a href="index.html#contact" class="btn">Request a Consultation</a>
+                    </div>
+                </div>
+                
+                <div class="service-detail-image">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="rgba(255, 215, 0, 0.2)" d="M41.6,-71.8C53.9,-66.1,63.9,-56.2,71.5,-44.2C79,-32.2,84.2,-18.1,82.9,-5C81.7,8.1,74.1,20.1,65.9,30.5C57.6,40.9,48.8,49.7,38.5,55.9C28.1,62.1,16.1,65.7,2.4,68.7C-11.3,71.7,-26.6,74.1,-38.6,69.4C-50.5,64.7,-59.1,52.8,-65.7,40C-72.3,27.1,-76.9,13.6,-76.3,0.4C-75.7,-12.9,-69.9,-25.7,-62.3,-36.8C-54.7,-47.9,-45.2,-57.2,-34.1,-63.8C-23,-70.3,-10.4,-74.1,2.1,-77.7C14.6,-81.3,29.2,-84.9,41.6,-71.8Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- AI Strategy Consulting Service -->
+            <div id="ai-strategy" class="service-detail-grid">
+                <div class="service-detail-image">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="rgba(100, 255, 218, 0.2)" d="M43.9,-76.5C57.3,-69.7,68.9,-59.4,76.3,-46.5C83.6,-33.6,86.8,-17.9,85.4,-3.1C84,11.7,78,24.4,70.5,36.1C63,47.9,54,58.8,42.6,67.8C31.2,76.9,17.4,84.2,1.5,84.5C-14.4,84.8,-30.8,78.1,-44.5,68.8C-58.2,59.6,-69,47.7,-76.3,33.9C-83.5,20.1,-87.1,4.3,-84.7,-10.4C-82.3,-25.1,-73.8,-38.7,-63.1,-49.1C-52.3,-59.5,-39.3,-66.7,-25.9,-73.1C-12.5,-79.4,1.3,-84.8,15.4,-83.9C29.6,-83,59.2,-76,43.9,-76.5Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+                
+                <div class="service-detail-content">
+                    <h2 class="service-detail-title">AI Strategy <span>Consulting</span></h2>
+                    <p class="service-detail-text">Develop a comprehensive AI roadmap for your organization with our expert guidance. Our AI Strategy Consulting helps you identify the most valuable AI opportunities, prioritize initiatives, and create a clear implementation plan that aligns with your business objectives.</p>
+                    
+                    <div class="service-detail-features">
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>AI opportunity assessment and feasibility analysis</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Technology selection and vendor evaluation</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Data strategy development and governance frameworks</p>
+                        </div>
+                        <div class="service-detail-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>ROI projections and success metrics definition</p>
+                        </div>
+                    </div>
+                    
+                    <p class="service-detail-text">Our consultants bring deep expertise in both business strategy and artificial intelligence, helping you navigate the complex landscape of AI technologies and ensuring your investments deliver maximum value. We work collaboratively with your team to build capabilities, transfer knowledge, and establish the foundation for long-term AI success.</p>
+                    
+                    <div class="service-detail-cta">
+                        <a href="index.html#contact" class="btn">Request a Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div style="background: var(--medium-blue); border-radius: 10px; padding: 50px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(100, 255, 218, 0.1);">
+                <h2 class="section-title" style="margin-bottom: 20px;">Ready to <span class="text-gradient">Transform</span> Your Business?</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 30px;">
+                    Contact us today to discuss how our AI solutions can address your specific business challenges and unlock new opportunities for growth.
+                </p>
+                <a href="index.html#contact" class="btn">Schedule a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <div class="logo-text">Artificial <span>Genesis</span></div>
+                    </div>
+                    <p>Pioneering the future of business with innovative AI solutions that transform operations, enhance decision-making, and drive sustainable growth.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Twitter">t</a>
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#process">Process</a></li>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#custom-ai">Custom AI Development</a></li>
+                        <li><a href="#workflow-integration">Workflow Integration</a></li>
+                        <li><a href="#predictive-analytics">Predictive Analytics</a></li>
+                        <li><a href="#ai-strategy">AI Strategy Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map"></i> Central North Carolina</p>
+                    <p><i class="fas fa-envelope"></i> info@artificialgenesisai.com</p>
+                    <p><i class="fas fa-phone"></i> (336) 865-9502</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Artificial Genesis. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Create particles for the hero section
+        window.addEventListener('load', createParticles);
+        
+        // Additional script for service page animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate service detail sections on scroll
+            const serviceDetails = document.querySelectorAll('.service-detail-grid');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -100px 0px"
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, observerOptions);
+            
+            serviceDetails.forEach(detail => {
+                detail.style.opacity = "0";
+                detail.style.transform = "translateY(30px)";
+                detail.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+                observer.observe(detail);
+            });
+        });
+    </script>
+</body>
+</html>
